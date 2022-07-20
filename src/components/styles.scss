@@ -1,0 +1,88 @@
+body {
+    background-color: #3f3f3f;
+    overflow-x: hidden;
+}
+
+.background {
+    background-image: url("../img/meals.jpg");
+    background-size: cover;
+    height: 450px;
+    background-position: center;
+    position: relative;
+    z-index: -1;
+    .waves {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+.details {
+    width: 50%;
+    height: 230px;
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    transform: translate(-50%);
+}
+
+.button {
+    background-color: rgba(0, 0, 0, 0.493);
+}
+
+.listAnimate {
+    animation: ShowList 1.5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes ShowList {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-animate-enter {
+    opacity: 0;
+    transform: translate(-50%, -150px);
+}
+
+.modal-animate-enter-active {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    transition: all 1s;
+}
+
+.modal-animate-exit {
+    opacity: 1;
+    transform: translate(-50%, 0px);
+}
+
+.modal-animate-exit-active {
+    opacity: 0;
+    transform: translate(-50%, -150px);
+    transition: all 1s;
+}
+
+.backdrop-animate-enter {
+    opacity: 0;
+}
+
+.backdrop-animate-enter-active {
+    opacity: 0.6;
+    transition: all 1s;
+}
+
+.backdrop-animate-exit {
+    opacity: 0.6;
+}
+
+.backdrop-animate-exit-active {
+    opacity: 0;
+    transition: all 1s;
+}
